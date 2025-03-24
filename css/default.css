@@ -1,6 +1,6 @@
 html,body{
     background-color: #1b1b1b;
-    font-size: large;
+    font-size: 4vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,10 +20,13 @@ html,body{
     background-color: white;
     padding: 10px;
     border-radius: 3px;
+    width: 90vw;
 }
 #aviso{
     font-size: larger;
     margin: 10px;
+    text-align: center;
+    width: inherit;
 }
 .perolas input{
     margin-top: 5px;
