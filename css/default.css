@@ -1,6 +1,5 @@
 html,body{
     background-color: #1b1b1b;
-    font-size: 4vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,7 +29,6 @@ nav{
 }
 .aba{
     margin: 0px 10px;
-    font-size: 3vh;
     text-decoration: none;
     color: black;
     background-color: transparent;
