@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veine</title>
+    <link rel="stylesheet" href="css/default.css">
+    <script type="text/javascript" src="js/default.js" id="main"></script>
+</head>
+<body>
+    <div class="div">
+        <div class="centralizar perolas">
+            Preço por Medida (10 Gramas):<br>
+            <input type="number" id="precopormedida"><br><br>
+            Peso na balança:<br>
+            <input type="number" id="pesonabalanca"><br><br>
+            <input type="button" value="Somar" onclick="Somar()">
+        </div>
+        <div class="centralizar">
+            <span id="aviso"></span>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Ultimo Valor</th>
+                        <th scope="col">Valor Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="ultimovalor"></td>
+                        <td id="valortotal"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <span id="resultado"></span>
+</body>
+</html>
