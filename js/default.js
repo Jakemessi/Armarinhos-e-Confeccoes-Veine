@@ -5,6 +5,7 @@ function AtualizarValores(receba){
     ultimovalor = receba
     document.getElementById("ultimovalor").innerHTML = `${ultimovalor.toFixed(2)}`
     document.getElementById("valortotal").innerHTML = `${valortotal.toFixed(2)}`
+    document.getElementById("desconto").innerHTML = `${(valortotal.toFixed(2)*0.75)}`
     document.getElementById("aviso").innerHTML = ``
 }
 
