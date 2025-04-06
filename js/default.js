@@ -112,3 +112,11 @@ function Somar(cavalo, corsa){
         }
     }
 }
+function Resetar(){
+    valortotal = 0
+    ultimovalor = 0
+    document.getElementById("ultimovalor").innerHTML = ``
+    document.getElementById("valortotal").innerHTML = ``
+    document.getElementById("desconto").innerHTML = ``
+    document.getElementById("aviso").innerHTML = ``
+}
