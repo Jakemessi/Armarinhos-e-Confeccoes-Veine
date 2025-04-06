@@ -9,21 +9,106 @@ function AtualizarValores(receba){
     document.getElementById("aviso").innerHTML = ``
 }
 
-function Somar(){
-    var precopormedida,pesonabalanca,resultado
-    precopormedida = parseFloat(document.getElementById("precopormedida").value);
-    pesonabalanca = parseFloat(document.getElementById("pesonabalanca").value);
-    resultado = precopormedida * (pesonabalanca / 10);
-    if(Number.isNaN(precopormedida)){
-        document.getElementById("aviso").innerHTML = `O valor digitado no Preço por Medida é invalido, digite novamente e troque vírgulas por ponto final.`
+function Somar(cavalo, corsa){
+    if(cavalo == 1){
+        var preco,tipo
+        tipo = document.querySelector('input[name="tipo"]:checked').value;
+        // Tipo 1 2 3 respectivamente Soft, Fleece, Fleece Brilhante
+        if(corsa == 1){ // Tamanhos 1 - 2 - 3 - 4
+            if(tipo == 1){
+                preco = 50
+            }
+            else if(tipo == 2){
+                preco = 50
+            }
+            else{
+                preco = 100
+            }
+        }
+        else if (corsa == 6){ // Tamanhos 6 - 8
+            if(tipo == 1){
+                preco = 60
+            }
+            else if(tipo == 2){
+                preco = 50
+            }
+            else{
+                preco = 100
+            } 
+        }
+        else if (corsa == 10){ // Tamanhos 10 - 12
+            if(tipo == 1){
+                preco = 70
+            }
+            else if(tipo == 2){
+                preco = 50
+            }
+            else{
+                preco = 130
+            }
+        }
+        else if (corsa == 14){ // Tamanhos 14 - 16
+            if(tipo == 1){
+                preco = 80
+            }
+            else if(tipo == 2){
+                preco = 50
+            }
+            else{
+                preco = 0
+            }
+        }
+        else if (corsa == 17){ // Tamanho P
+            if(tipo == 1){
+                preco = 80
+            }
+            else if(tipo == 2){
+                preco = 50
+            }
+            else{
+                preco = 0
+            }
+        }
+        else if (corsa == 18){ // Tamanho M
+            if(tipo == 1){
+                preco = 80
+            }
+            else if(tipo == 2){
+                preco = 50
+            }
+            else{
+                preco = 0
+            }
+        }
+        else{// Tamanhos G e GG
+            if(tipo == 1){
+                preco = 100
+            }
+            else if(tipo == 2){
+                preco = 50
+            }
+            else{
+                preco = 0
+            }
+        }
+        AtualizarValores(preco)
     }
     else{
-        if(Number.isNaN(pesonabalanca)){
-            document.getElementById("aviso").innerHTML = `O valor digitado no Peso na Balança é invalido, digite novamente e troque vírgulas por ponto final`
+        var precopormedida,pesonabalanca,resultado
+        precopormedida = parseFloat(document.getElementById("precopormedida").value);
+        pesonabalanca = parseFloat(document.getElementById("pesonabalanca").value);
+        resultado = precopormedida * (pesonabalanca / 10);
+        if(Number.isNaN(precopormedida)){
+            document.getElementById("aviso").innerHTML = `O valor digitado no Preço por Medida é invalido, digite novamente e troque vírgulas por ponto final.`
         }
         else{
-            document.getElementById("ultimovalor").innerHTML = `O resultado da soma é ${resultado}`
-            AtualizarValores(resultado)
+            if(Number.isNaN(pesonabalanca)){
+                document.getElementById("aviso").innerHTML = `O valor digitado no Peso na Balança é invalido, digite novamente e troque vírgulas por ponto final`
+            }
+            else{
+                document.getElementById("ultimovalor").innerHTML = `O resultado da soma é ${resultado}`
+                AtualizarValores(resultado)
+            }
         }
     }
 }

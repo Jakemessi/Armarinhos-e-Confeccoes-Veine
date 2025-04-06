@@ -44,6 +44,16 @@ nav{
     align-content: center;
     flex-wrap: wrap;
 }
+.centralizar2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.centralizar2 input{
+    margin: 0px 10px;
+}
 .div{
     background-color: white;
     padding: 10px;
@@ -67,4 +77,6 @@ nav{
     background-color: red;
     color: white;
 }
-/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+.infantil{
+    margin-bottom: 10px;
+}

@@ -7,11 +7,32 @@
 </head>
 <body>
     <div id="grupamento" class="centralizar roupas">
-        Preço por Medida (10 Gramas):<br>
-        <input type="number" id="precopormedida"><br><br>
-        Peso na balança:<br>
-        <input type="number" id="pesonabalanca"><br><br>
-        <input type="button" value="Somar" onclick="Somar()">
+        <span>Clique no tamanho</span>
+        <div>
+            <div style="text-align: center;">
+                <input checked type="radio" id="soft" name="tipo" value="1">
+                <label for="soft">Soft</label>
+                <input type="radio" id="fleece" name="tipo" value="2">
+                <label for="fleece">Fleece</label>
+                <input type="radio" id="fleecebrilhante" name="tipo" value="3">
+                <label for="fleecebrilhante">Fleece Brilhante</label>
+            </div>
+            <br><br>
+            
+            <div>
+                <div class="centralizar2 infantil">
+                    <input type="button" value="1 - 2 - 3 - 4" onclick="Somar(1,1)">
+                    <input type="button" value="6 - 8" onclick="Somar(1,6)">
+                    <input type="button" value="10 - 12" onclick="Somar(1,10)">
+                    <input type="button" value="14 - 16" onclick="Somar(1,14)">
+                </div>
+                <div class="centralizar2 infantil">
+                    <input type="button" value="Tamanho P" onclick="Somar(1,17)">
+                    <input type="button" value="Tamanho M" onclick="Somar(1,18)">
+                    <input type="button" value="Tamanho G e GG" onclick="Somar(1,19)">
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
