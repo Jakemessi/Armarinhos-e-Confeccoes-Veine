@@ -19,10 +19,10 @@ function Somar(cavalo, corsa){
                 preco = 50
             }
             else if(tipo == 2){
-                preco = 50
+                preco = 75
             }
             else{
-                preco = 100
+                preco = 99.90
             }
         }
         else if (corsa == 6){ // Tamanhos 6 - 8
@@ -30,10 +30,10 @@ function Somar(cavalo, corsa){
                 preco = 60
             }
             else if(tipo == 2){
-                preco = 50
+                preco = 89.90
             }
             else{
-                preco = 100
+                preco = 115
             } 
         }
         else if (corsa == 10){ // Tamanhos 10 - 12
@@ -41,10 +41,10 @@ function Somar(cavalo, corsa){
                 preco = 70
             }
             else if(tipo == 2){
-                preco = 50
+                preco = 99
             }
             else{
-                preco = 130
+                preco = 129
             }
         }
         else if (corsa == 14){ // Tamanhos 14 - 16
@@ -52,10 +52,10 @@ function Somar(cavalo, corsa){
                 preco = 80
             }
             else if(tipo == 2){
-                preco = 50
+                preco = 115
             }
             else{
-                preco = 0
+                preco = 149
             }
         }
         else if (corsa == 17){ // Tamanho P
@@ -63,10 +63,10 @@ function Somar(cavalo, corsa){
                 preco = 80
             }
             else if(tipo == 2){
-                preco = 50
+                preco = 148
             }
             else{
-                preco = 0
+                preco = 229
             }
         }
         else if (corsa == 18){ // Tamanho M
@@ -74,22 +74,25 @@ function Somar(cavalo, corsa){
                 preco = 80
             }
             else if(tipo == 2){
-                preco = 50
+                preco = 148
             }
             else{
-                preco = 0
+                preco = 229
             }
         }
-        else{// Tamanhos G e GG
+        else if (corsa == 19){// Tamanhos G e GG
             if(tipo == 1){
                 preco = 100
             }
             else if(tipo == 2){
-                preco = 50
+                preco = 148
             }
             else{
-                preco = 0
+                preco = 229
             }
+        }
+        else if (corsa == 99){ // Casacos Teddy
+            preco = 238
         }
         AtualizarValores(preco)
     }
