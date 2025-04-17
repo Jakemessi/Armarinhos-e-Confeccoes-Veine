@@ -1,12 +1,15 @@
 var valortotal = 0
 var ultimovalor = 0
+var contador = 0
 function AtualizarValores(receba){
     valortotal = valortotal + receba
     ultimovalor = receba
+    contador ++
     document.getElementById("ultimovalor").innerHTML = `${ultimovalor.toFixed(2)}`
     document.getElementById("valortotal").innerHTML = `${valortotal.toFixed(2)}`
     document.getElementById("desconto").innerHTML = `${(valortotal.toFixed(2)*0.75)}`
     document.getElementById("aviso").innerHTML = ``
+    document.getElementById("contador").innerHTML = `${contador}`
 }
 
 function Somar(cavalo, corsa){
@@ -118,8 +121,10 @@ function Somar(cavalo, corsa){
 function Resetar(){
     valortotal = 0
     ultimovalor = 0
+    contador = 0
     document.getElementById("ultimovalor").innerHTML = ``
     document.getElementById("valortotal").innerHTML = ``
     document.getElementById("desconto").innerHTML = ``
     document.getElementById("aviso").innerHTML = ``
+    document.getElementById("contador").innerHTML = ``
 }
