@@ -94,8 +94,14 @@ function Somar(cavalo, corsa){
                 preco = 229
             }
         }
-        else if (corsa == 99){ // Casacos Teddy
+        else if (corsa == 99){ // Casacos Teddy Adulto
             preco = 198
+        }
+else if (corsa == 100){ // Casacos Teddy Infantil 4 - 6 - 8
+            preco = 75
+        }
+else if (corsa == 101){ // Casacos Teddy Infantil 10 - 12 - 14
+            preco = 119.90
         }
         AtualizarValores(preco)
     }
