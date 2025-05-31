@@ -7,7 +7,8 @@ function AtualizarValores(receba){
     contador ++
     document.getElementById("ultimovalor").innerHTML = `${ultimovalor.toFixed(2)}`
     document.getElementById("valortotal").innerHTML = `${valortotal.toFixed(2)}`
-    document.getElementById("desconto").innerHTML = `${(valortotal.toFixed(2)*0.75)}`
+    document.getElementById("desconto25").innerHTML = `${(valortotal.toFixed(2)*0.75)}`
+document.getElementById("desconto10").innerHTML = `${(valortotal.toFixed(2)*0.85)}`
     document.getElementById("aviso").innerHTML = ``
     document.getElementById("contador").innerHTML = `${contador}`
 }
@@ -130,7 +131,8 @@ function Resetar(){
     contador = 0
     document.getElementById("ultimovalor").innerHTML = ``
     document.getElementById("valortotal").innerHTML = ``
-    document.getElementById("desconto").innerHTML = ``
+    document.getElementById("desconto25").innerHTML = ``
+document.getElementById("desconto10").innerHTML = ``
     document.getElementById("aviso").innerHTML = ``
     document.getElementById("contador").innerHTML = ``
 }
