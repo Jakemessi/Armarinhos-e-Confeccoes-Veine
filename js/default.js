@@ -22,7 +22,7 @@ function Somar(cavalo, corsa){
                 preco = 50
             }
             else if(tipo == 2){
-                preco = 75
+                preco = 69.00
             }
             else{
                 preco = 99.90
@@ -33,7 +33,7 @@ function Somar(cavalo, corsa){
                 preco = 60
             }
             else if(tipo == 2){
-                preco = 89.90
+                preco = 75.00
             }
             else{
                 preco = 115
@@ -95,7 +95,7 @@ function Somar(cavalo, corsa){
             }
         }
         else if (corsa == 99){ // Casacos Teddy
-            preco = 238
+            preco = 198
         }
         AtualizarValores(preco)
     }
