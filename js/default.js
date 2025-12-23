@@ -8,7 +8,7 @@ function AtualizarValores(receba){
     document.getElementById("ultimovalor").innerHTML = `${ultimovalor.toFixed(2)}`
     document.getElementById("valortotal").innerHTML = `${valortotal.toFixed(2)}`
     document.getElementById("desconto25").innerHTML = `${(valortotal.toFixed(2)*0.75)}`
-document.getElementById("desconto10").innerHTML = `${(valortotal.toFixed(2)*0.85)}`
+    document.getElementById("desconto10").innerHTML = `${(valortotal.toFixed(2)*0.85)}`
     document.getElementById("aviso").innerHTML = ``
     document.getElementById("contador").innerHTML = `${contador}`
 }
@@ -124,6 +124,10 @@ else if (corsa == 101){ // Casacos Teddy Infantil 10 - 12 - 14
             }
         }
     }
+    document.getElementById("soma").style.backgroundColor = "green";
+    setTimeout(function() {
+        document.getElementById("soma").style.backgroundColor = "white";
+    }, 2000); 
 }
 function Resetar(){
     valortotal = 0
@@ -132,7 +136,11 @@ function Resetar(){
     document.getElementById("ultimovalor").innerHTML = ``
     document.getElementById("valortotal").innerHTML = ``
     document.getElementById("desconto25").innerHTML = ``
-document.getElementById("desconto10").innerHTML = ``
+    document.getElementById("desconto10").innerHTML = ``
     document.getElementById("aviso").innerHTML = ``
     document.getElementById("contador").innerHTML = ``
+    document.getElementById("limpa").style.backgroundColor = "red";
+    setTimeout(function() {
+        document.getElementById("limpa").style.backgroundColor = "white";
+    }, 2000); 
 }
