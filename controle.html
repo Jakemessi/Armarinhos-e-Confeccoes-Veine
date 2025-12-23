@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle</title>
+</head>
+<body>
+    <div id="grupamento" class="centralizar">
+        Valor a ser adicionado ou removido:
+        <input type="number" id="valor">
+        <span><br></span>
+        <div style="text-align: center;">
+                <input checked type="radio" id="somar" name="operacao" value="0">
+                <label for="Somar">Somar</label>
+                <input type="radio" id="subtrair" name="operacao" value="1">
+                <label for="Remover">Remover</label>
+        </div>
+        <span><br></span>
+        <input type="button" id="mudar" value="Mudar" onclick="Mudar()">
+        <span><br></span>
+        <div class="centralizar">
+            <p>
+                Numéro no Contador
+                <br>
+            </p>
+            <div>
+                <input type="button" id="au" value="Aumentar" onclick="cont(0)">
+                <input type="button" id="di" value="Diminuir" onclick="cont(1)">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

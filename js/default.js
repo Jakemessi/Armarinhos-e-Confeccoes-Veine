@@ -1,10 +1,12 @@
 var valortotal = 0
 var ultimovalor = 0
 var contador = 0
-function AtualizarValores(receba){
+function AtualizarValores(receba, mudando){
     valortotal = valortotal + receba
     ultimovalor = receba
-    contador ++
+    if(mudando == null){
+        contador ++
+    }
     document.getElementById("ultimovalor").innerHTML = `${ultimovalor.toFixed(2)}`
     document.getElementById("valortotal").innerHTML = `${valortotal.toFixed(2)}`
     document.getElementById("desconto25").innerHTML = `${(valortotal.toFixed(2)*0.75)}`
@@ -98,10 +100,10 @@ function Somar(cavalo, corsa){
         else if (corsa == 99){ // Casacos Teddy Adulto
             preco = 198
         }
-else if (corsa == 100){ // Casacos Teddy Infantil 4 - 6 - 8
+        else if (corsa == 100){ // Casacos Teddy Infantil 4 - 6 - 8
             preco = 75
         }
-else if (corsa == 101){ // Casacos Teddy Infantil 10 - 12 - 14
+        else if (corsa == 101){ // Casacos Teddy Infantil 10 - 12 - 14
             preco = 119.90
         }
         AtualizarValores(preco)
@@ -129,6 +131,42 @@ else if (corsa == 101){ // Casacos Teddy Infantil 10 - 12 - 14
         document.getElementById("soma").style.backgroundColor = "white";
     }, 2000); 
 }
+
+function Mudar(){
+    if(document.getElementById("valor").value != ""){
+        tipo = document.querySelector('input[name="operacao"]:checked').value;
+        //0 - soma 1 - remove
+        if(tipo == 0){
+            AtualizarValores(parseFloat(document.getElementById("valor").value),1)
+        }
+        else if(tipo == 1){
+            AtualizarValores(parseFloat(document.getElementById("valor").value*-1),1)
+        }
+        document.getElementById("mudar").style.backgroundColor = "green";
+        setTimeout(function() {
+            document.getElementById("mudar").style.backgroundColor = "white";
+        }, 2000); 
+    }
+}
+
+function cont(salut){
+    if(salut == 0){
+        contador ++
+        document.getElementById("au").style.backgroundColor = "green";
+        setTimeout(function() {
+            document.getElementById("au").style.backgroundColor = "white";
+        }, 2000); 
+    }
+    else{
+        contador --
+        document.getElementById("di").style.backgroundColor = "green";
+        setTimeout(function() {
+            document.getElementById("di").style.backgroundColor = "white";
+        }, 2000); 
+    }
+    document.getElementById("contador").innerHTML = `${contador}`
+}
+
 function Resetar(){
     valortotal = 0
     ultimovalor = 0
