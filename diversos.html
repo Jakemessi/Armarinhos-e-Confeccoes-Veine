@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle</title>
+</head>
+<body>
+    <div id="grupamento" class="centralizar">
+        <div style="text-align: center;">
+                <span style="margin: 10px;">Tamanho linha em centimetros:</span>
+                <input style="margin: 10px;" type="number" id="tamlinha">
+                <br>
+                <span style="margin: 10px;">Preço por metro:</span>
+                <input style="margin: 10px;" type="number" id="preclinha">
+                <br>
+                <input style="margin: 10px;" type="button" id="soma" value="Somar" onclick="Somar(2)">
+        </div>
+        <span style="margin: 1vh;"></span>
+        <div style="text-align: center;">
+            <span style="margin: 50px;">Sabão</span>
+            <br>
+            <div style="text-align: center; margin: 10px;">
+                <input checked type="radio" id="kg" name="qual" value="0">
+                <label for="kilo">Por Kilo (10)</label>
+                <input type="radio" id="unidade" name="qual" value="1">
+                <label for="unidade">Por Unidade (1,50)</label>
+            </div>
+            <div>
+                <input type="number" placeholder="Quantidade ou Gramas" id="valorsabao">
+            </div>
+            <br>
+            <input type="button" id="soma" value="Somar" onclick="Somar(3)">
+        </div>
+    </div>
+</body>
+</html>

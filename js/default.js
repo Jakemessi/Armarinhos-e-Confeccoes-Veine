@@ -108,6 +108,41 @@ function Somar(cavalo, corsa){
         }
         AtualizarValores(preco)
     }
+    else if(cavalo == 2){
+        var precolinha,tamanholinha,resultado
+        precolinha = parseFloat(document.getElementById("preclinha").value);
+        tamanholinha = parseFloat(document.getElementById("tamlinha").value);
+        if(Number.isNaN(precolinha)){
+            document.getElementById("aviso").innerHTML = `O valor digitado no Preço da Linha é invalido, digite novamente e troque vírgulas por ponto final.`
+        }
+        else{
+            if(Number.isNaN(tamanholinha)){
+                document.getElementById("aviso").innerHTML = `O valor digitado no Tamanho da Linha é invalido, digite novamente e troque vírgulas por ponto final`
+            }
+            else{
+                document.getElementById("ultimovalor").innerHTML = `O resultado da soma é ${resultado}`
+                AtualizarValores((tamanholinha/100)*precolinha)
+            }
+        }
+    }
+    else if(cavalo == 3){
+        var tipo,valor,resultado
+        tipo = document.querySelector('input[name="qual"]:checked').value;
+        valor = parseFloat(document.getElementById("valorsabao").value);
+        if(Number.isNaN(valor)){
+            document.getElementById("aviso").innerHTML = `O valor digitado no Valor do Sabão é invalido, digite novamente e troque vírgulas por ponto final.`
+        }
+        else{
+            if(tipo == 0){
+                resultado = (valor / 1000) * 10
+            }
+            else{
+                resultado = valor * 1.5
+            }
+            document.getElementById("ultimovalor").innerHTML = `O resultado da soma é ${resultado}`
+            AtualizarValores(resultado)
+        }
+    }
     else{
         var precopormedida,pesonabalanca,resultado
         precopormedida = parseFloat(document.getElementById("precopormedida").value);
@@ -119,17 +154,15 @@ function Somar(cavalo, corsa){
         else{
             if(Number.isNaN(pesonabalanca)){
                 document.getElementById("aviso").innerHTML = `O valor digitado no Peso na Balança é invalido, digite novamente e troque vírgulas por ponto final`
+                
             }
             else{
                 document.getElementById("ultimovalor").innerHTML = `O resultado da soma é ${resultado}`
                 AtualizarValores(resultado)
+                Esverdearbotao(`soma`)
             }
         }
     }
-    document.getElementById("soma").style.backgroundColor = "green";
-    setTimeout(function() {
-        document.getElementById("soma").style.backgroundColor = "white";
-    }, 2000); 
 }
 
 function Mudar(){
@@ -142,27 +175,18 @@ function Mudar(){
         else if(tipo == 1){
             AtualizarValores(parseFloat(document.getElementById("valor").value*-1),1)
         }
-        document.getElementById("mudar").style.backgroundColor = "green";
-        setTimeout(function() {
-            document.getElementById("mudar").style.backgroundColor = "white";
-        }, 2000); 
+        Esverdearbotao(`mudar`)
     }
 }
 
 function cont(salut){
     if(salut == 0){
         contador ++
-        document.getElementById("au").style.backgroundColor = "green";
-        setTimeout(function() {
-            document.getElementById("au").style.backgroundColor = "white";
-        }, 2000); 
+        Esverdearbotao(`au`)
     }
     else{
         contador --
-        document.getElementById("di").style.backgroundColor = "green";
-        setTimeout(function() {
-            document.getElementById("di").style.backgroundColor = "white";
-        }, 2000); 
+        Esverdearbotao(`au`)
     }
     document.getElementById("contador").innerHTML = `${contador}`
 }
@@ -180,5 +204,12 @@ function Resetar(){
     document.getElementById("limpa").style.backgroundColor = "red";
     setTimeout(function() {
         document.getElementById("limpa").style.backgroundColor = "white";
+    }, 2000); 
+}
+
+function Esverdearbotao(id){
+    document.getElementById(id).style.backgroundColor = "green";
+    setTimeout(function() {
+        document.getElementById(id).style.backgroundColor = "white";
     }, 2000); 
 }
